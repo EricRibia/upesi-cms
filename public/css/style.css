@@ -6119,3 +6119,11 @@ h4.slide_typo{
   border-radius: 20px;
   margin: 15px;
 }
+.form-msgs{
+    position: absolute;
+    top: 110px;
+    z-index: 999999;
+    margin: 0 auto;
+    width: auto;
+    left: 35%;
+    }

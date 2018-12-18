@@ -12,34 +12,43 @@
 */
 // main routes
 Route::get('/', function () {
-    return view('welcome');
+    $page = 'Home | Upesi Money Transfer';
+    return view('frontend.main',compact('page'));
 });
 
 Route::get('/about-us', function () {
-    return view('frontend.about');
+    $page = 'About | Upesi Money Transfer';
+    return view('frontend.about',compact('page'));
 });
 Route::get('/services', function () {
-    return view('frontend.services');
+    $page = 'Services | Upesi Money Transfer';
+    return view('frontend.services',compact('page'));
 });
 Route::get('/networks', function () {
-    return view('frontend.network');
+    $page = 'Services | Upesi Money Transfer';
+    return view('frontend.network',compact('page'));
 });
 Route::get('/contact', function () {
-    return view('frontend.contact');
+    $page = 'Contact Us | Upesi Money Transfer';
+    return view('frontend.contact',compact('page'));
 });
 Route::get('/send-money', function () {
-    return view('frontend.send-money');
+    $page = 'Send Money | Upesi Money Transfer';
+    return view('frontend.send-money',compact('page'));
 });
 //other routes
 Route::get('/team', function () {
-    return view('frontend.team');
+    $page = 'Team | Upesi Money Transfer';
+    return view('frontend.team',compact('page'));
 });
 Route::get('/careers', 'StaticPageController@careers');
 Route::get('/how-it-works', function () {
-    return view('frontend.howitworks');
+    $page = 'How it works | Upesi Money Transfer';
+    return view('frontend.howitworks',compact('page'));
 });
 Route::get('/faqs', function () {
-    return view('frontend.faqs');
+    $page = 'FAQs | Upesi Money Transfer';
+    return view('frontend.faqs',compact('page'));
 });
 Route::get('/privacy-policy', function () {
     return view('frontend.privacy-policy');
@@ -101,5 +110,4 @@ Auth::routes();
 Route::post('contact', 'ContactController@userforms');
 Route::resource('main', 'FormController');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/backend', 'HomeController@main')->name('backend');
 Route::get('{path}', 'HomeController@main')->where('path', '([A-z\d-\/_.]+)?' );

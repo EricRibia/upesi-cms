@@ -80,6 +80,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </p>
                 </router-link>
               </li>
+              <li>
+              <a href="{{url ('about-us')}}" class="nav-link">
+                <i class="nav-icon fa fa-tachometer-alt"></i>
+                <p>
+                  View Frontend
+                </p>
+              </a>
+            </li>
           {{-- @canany(['isAdmin', 'isAuthor']) --}}
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Upesi Money Transfer">
     <meta name="author" content="Ansonika">
-    <title>Home | Upesi Money Transfer</title>
+    <title>{{$page}}</title>
 
     <!-- Start of Head -->
     @include('frontend.inc.head')

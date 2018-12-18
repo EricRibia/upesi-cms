@@ -46,7 +46,9 @@
                     <h4>Send a message</h4>
                     
                     
-                    <form method="post" action="contact-mailer.php" id="contactForm" autocomplete="off">
+ 
+                            {!! Form::open(['action' => 'FormController@store', 'method' => 'POST']) !!}
+                            {{ Form::hidden('identifier', 'contact') }}
                         <div class="row">
                             <div class="col-md-6">
                                 <span class="input">
@@ -95,13 +97,14 @@
                         <span class="input">
                             <div class="g-recaptcha" data-sitekey="6Le9BXcUAAAAAPxGlMlQdsp6NSLUgqJ-Z9dsU50m"></div>
                         </span>
+                    
 
 
 
-                        <p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded" id="submitContact" ></p>
+                        <p class="add_top_30"><input type="submit" value="Submit" class="btn_1 rounded"></p>
 
                         
-                    </form>
+                        {!! Form::close() !!}
                     <div id="contact-messages"></div>
                 </div>
             </div>

@@ -18,7 +18,7 @@
     </ul>
     <!-- /top_menu -->
 </header>
-<div class="container">
+<div class="container form-msgs">
 @include('layouts.messages')
 </div>
 <!-- /header -->

@@ -44,6 +44,7 @@
                             </label>
                             </span>
                         </div>
+                    
 
                         <div class="col-sm">
                             <button type="submit" class="btn_1 rounded full-width add_top_30" value="Send Money">Submit</button>
