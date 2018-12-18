@@ -44,7 +44,6 @@ class UserController extends Controller
             'password' => 'required|string|min:6',
             'type' => 'required'
         ]);
-
         return User::create([
             'name' => $request['name'],
             'email' => $request['email'],

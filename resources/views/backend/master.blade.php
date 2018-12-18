@@ -15,6 +15,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>Upesi Money Transfer</title>
 
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">
@@ -74,15 +76,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
                <li class="nav-item">
                 <router-link to="/dashboard" class="nav-link">
-                  <i class="nav-icon fa fa-tachometer-alt"></i>
+                  <i class="fa fa-tachometer"></i>
                   <p>
                     Dashboard
                   </p>
                 </router-link>
               </li>
               <li>
-              <a href="{{url ('about-us')}}" class="nav-link">
-                <i class="nav-icon fa fa-tachometer-alt"></i>
+              <a href="{{url ('/')}}" class="nav-link">
+                <i class="fa fa-external-link"></i>
                 <p>
                   View Frontend
                 </p>
@@ -100,24 +102,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <router-link to="/edit-about" class="nav-link">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-globe"></i>
                   <p>About us</p>
                 </router-link>
               </li>
               <li class="nav-item">
                 <router-link to="/edit-services" class="nav-link">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-globe"></i>
                   <p>Services</p>
                 </router-link>
               </li>
               <li class="nav-item">
                 <router-link to="/edit-policies" class="nav-link">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-globe"></i>
                   <p>FAQs and Policies</p>
                 </router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/edit-team" class="nav-link">
+                <router-link to="/edit-globe" class="nav-link">
                   <i class="fas fa-circle"></i>
                   <p>Team</p>
                 </router-link>
@@ -164,13 +166,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </ul>
           </li>
           <li class="nav-item">
-            <router-link to="/profile" class="nav-link">
-              <i class="fas fa-user"></i>
-              <p>
-                Profile
-              </p>
-            </router-link>
-          </li>
+              <router-link to="/users" class="nav-link">
+                <i class="fa fa-shield"></i>
+                <p>Manage users</p>
+              </router-link>
+            </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('logout') }}"
             onclick="event.preventDefault();

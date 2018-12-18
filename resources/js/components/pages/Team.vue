@@ -29,7 +29,7 @@
                     <th>Modify</th>
                   </tr>
                     <tr v-for="value in paginated('tasks')"  :key="value.id">
-                    <td>{{value.photo}}</td>
+                    <td><img class="backProfiles" :src="'/img/team/'+ value.photo"></td>
                     <td>{{value.name}}</td>
                     <td>{{value.title}}</td>
                     <td>{{value.info | summary}}</td>

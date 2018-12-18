@@ -4,7 +4,7 @@
           <div class="col-md-12">
             <div class="card" v-if="$gate.isAuthorOrAdmin()">
               <div class="card-header">
-                <h3 class="card-title">about table</h3>
+                <h3 class="card-title">Users table</h3>
 
                 <div class="card-tools">
                   <button class="btn btn-success" @click="newModal">Add user <i class="fas fa-user-plus fa-fw"></i></button>
@@ -21,7 +21,7 @@
                     <th>Registered at</th>
                     <th>Modify</th>
                   </tr>
-                  <tr v-for=" user in about.data" :key="user.id">
+                  <tr v-for=" user in users.data" :key="user.id">
                     <td>{{user.id}}</td>
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
@@ -37,7 +37,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                  <pagination :data="about" @pagination-change-page="getResults"></pagination>
+                  <pagination :data="users" @pagination-change-page="getResults"></pagination>
               </div>
             </div>
             <!-- /.card -->
@@ -116,7 +116,7 @@
         data(){
             return {
                 editMode : false,
-                about: {},
+                users: {},
                 form : new Form({
                     id:'',
                     name: '',
@@ -173,10 +173,10 @@
                     }
                 })
             },
-            loadabout(){
+            loadUsers(){
                 if(this.$gate.isAuthorOrAdmin())
                 {
-                    axios.get('api/user').then(( {data} ) => (this.about = data));
+                    axios.get('api/user').then(( {data} ) => (this.users = data));
                 }
             },
             updateUser(){
@@ -215,14 +215,14 @@
             getResults(page = 1) {
 			axios.get('api/user?page=' + page)
 				.then(response => {
-					this.about = response.data;
+					this.users = response.data;
 				});
 		    }
         },
         created() {
-            this.loadabout();
-            Fire.$on('createUser', () => this.loadabout() );
-            // setInterval( () => this.loadabout(), 3000);
+            this.loadUsers();
+            Fire.$on('createUser', () => this.loadUsers() );
+            // setInterval( () => this.loadUsers(), 3000);
         }
     }
 </script>

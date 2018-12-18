@@ -29956,3 +29956,8 @@ ul.paginate-links > li.active > a {
   background-color: #4CAF50;
 }
 
+.backProfiles {
+  width: 35%;
+  border-radius: 50%;
+}
+
