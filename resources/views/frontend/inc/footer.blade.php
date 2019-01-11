@@ -65,9 +65,9 @@
         <div class="row">
             <div class="col-lg-5 col-md-12 p-r-5">
                 <h5>Contact Us</h5>
-                <p><i class="ti-map"></i> Ground Floor, Morningside Office Park,<br> Ngong Road, Nairobi Kenya.</p>
-                <p><i class="ti-mobile"></i> +254 726 500 404 / +254 726 499 656</p>
-                <p><i class="ti-email"></i> info@upesi.co.ke</p>
+                <p><i class="ti-map"></i>{!!$contactus[0]->description!!}</p>
+                <p><i class="ti-mobile"></i> {{$contactus[1]->description}} / {{$contactus[2]->description}}</p>
+                <p><i class="ti-email"></i> {{$contactus[3]->description}}</p>
                 <div class="follow_us">
                     <ul>
                         <li>Follow us</li>

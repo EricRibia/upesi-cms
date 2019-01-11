@@ -6,7 +6,7 @@
 <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">-->
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- BASE CSS -->
 <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -16,7 +16,7 @@
 <link href="{{asset('js/frontend/jsmaps/jsmaps.css')}} rel="stylesheet" type="text/css" />
 <script src="{{asset('js/frontend/jsmaps/jsmaps-libs.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/frontend/jsmaps/jsmaps-panzoom.js')}}" type="text/javascript"></script>
-<script src="{{asset('js/frontend/jsmaps/jsmaps.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/frontend/jsmaps/jsmaps.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('js/frontend/maps/world.js')}}" type="text/javascript"></script>
 <!-- SPECIFIC CSS -->
 <link rel="stylesheet" href="{{asset('css/layerslider/css/layerslider.css')}}">
@@ -24,5 +24,5 @@
 <!-- YOUR CUSTOM CSS -->
 <link rel="stylesheet" href="{{asset('css/custom.css')}}">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 

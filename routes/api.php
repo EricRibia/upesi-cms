@@ -29,6 +29,8 @@ Route::apiResources(
     ['team' => 'API\TeamController']);
 Route::apiResources(
     ['countries' => 'API\CountryController']);
+Route::apiResources(
+    ['payments' => 'API\PaymentsController']);
     
 
 Route::get('profile', 'API\UserController@profile');

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 use App\Country;
+use App\About;
 use Illuminate\Support\ServiceProvider;
 use  Illuminate\Support\Facades\Schema;
 class AppServiceProvider extends ServiceProvider
@@ -13,8 +14,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $data = Country::all();
-        view()->share('all', $data);
+        $data['contactus'] = About::where('type','contact')->get();
+        $data['all'] = Country::all();
+        view()->share($data);
         Schema::defaultStringLength(191);
     }
 

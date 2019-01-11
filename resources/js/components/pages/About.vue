@@ -154,6 +154,71 @@
                 </div>
             </div>
             </div>
+            <div class="row mt-5">
+            <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Edit contact information</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <tbody><tr>
+                    <th>Contact type</th>
+                    <th>Description</th>
+                    <th>Updated at</th>
+                    <th>Modify</th>
+                  </tr>
+                  <tr v-for=" about in abContact()" :key="about.id">
+                    <td>{{about.title}}</td>
+                    <td>{{about.description | summary}}</td>
+                    <td>{{about.updated_at | fDate}}</td>
+                    <td>
+                        <a href="#" @click="editModalTwo(about)"><i class="fas fa-edit"></i></a>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            <!-- .notfound -->
+             <div class="card">
+            <!-- <notfound></notfound> -->
+             </div>
+            <!-- /.notfound -->
+          </div>
+        </div>
+                  <!-- Modal -->
+            <div class="modal fade" id="addNewTwo" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addNewLabel">Update About section</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form @submit.prevent="editMode ? updateAbout() : createAbout()">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <textarea v-model="form.description" type="text" name="bio"
+                            rows="10"
+                            placeholder="Enter description"
+                            class="form-control">
+                        </textarea>
+                <has-error :form="form" field="description"></has-error>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button v-show="editMode" type="submit" class="btn btn-success">Update</button>
+                </div>
+                </form>
+                </div>
+            </div>
+            </div>
         </div>
 
 
@@ -197,6 +262,12 @@ export default {
             return newdata.filter( (val) => { return val.type =='about'; });
             }
         },
+    abContact() {
+        if(this.tasks){
+        const newdata = this.tasks;
+        return newdata.filter( (val) => { return val.type =='contact'; });
+        }
+    },
      newModal(){
         this.editMode = false;
         this.form.reset();
