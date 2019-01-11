@@ -43,7 +43,7 @@ Route::group(['middleware' => 'guest'], function(){
 
 });
 
-Route::get('/', 'HomeController@home_page')->middleware('guest');
+Route::get('/', 'HomeController@home_page');
 Route::get('/about-us', 'HomeController@about_us');
 Route::get('/services', 'HomeController@services_page');
 
