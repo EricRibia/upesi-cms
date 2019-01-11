@@ -88,6 +88,8 @@ class TeamController extends Controller
             if( file_exists($userPhoto)){
                 @unlink($userPhoto);
             }
+        }else{
+            $name = $request->input('photo');
         }
         $team->title = $request->input('title');
         $team->name = $request->input('name');

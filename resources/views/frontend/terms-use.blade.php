@@ -31,8 +31,8 @@
                                 <h2>Terms of use</h2>
                                             
                         </div>
-                        
-                        <p>You must follow any policies made available to you with the use of our Services.
+                        {!! nl2br(e($terms[0])) !!}
+                        {{-- <p>You must follow any policies made available to you with the use of our Services.
                         </p>
                         <p>We do not allow misuse, unauthorized resell or abuse of our Services. By accepting use of our Services, you agree to not interfere with our Service stipulations, access our Service using a method other than what is included in your contract with us and outlined in the instructions agreed upon. You may use our Services only as permitted by law, including applicable export and re-export control laws and regulations. We may suspend, revoke or terminate our Services to you if you do not comply with our terms or policies or if we are investigating suspected misconduct or fraudulent activity.
                         </p>
@@ -41,7 +41,7 @@
                         <p>Our Services many times display proprietary content. In regards to this content: the content is the sole responsibility of the entity that makes it available, however, by using our Service, you agree to allow Upesi, if deemed necessary, the right to review this content to determine whether it is illegal or violates our policies, and that we may remove or refuse to display content that we reasonably believe violates our policies or the law.</p>
                         <p>In connection with your use of our Services, you agree that we may send you Service notifications, announcements, administrative messages, and other information pertaining to the use of our Services. After acceptance of these agreements, you may opt-out of some of these communications.</p>
                         <p>By using our Services on mobile devices, you agree to not use our Services that are in a manner to distract, detour or increase risk during operation of a moving vehicle or when obeying traffic and safety laws. By using our Services, you agree to hold Upesi harmless for any activity that causes injury, damages property or violates laws in accordance with these terms.</p>
-                        
+                         --}}
 
                         
                         

@@ -47,7 +47,7 @@
                     
                     
  
-                            {!! Form::open(['action' => 'FormController@store', 'method' => 'POST']) !!}
+                            {!! Form::open(['action' => 'ContactController@userforms', 'method' => 'POST']) !!}
                             {{ Form::hidden('identifier', 'contact') }}
                         <div class="row">
                             <div class="col-md-6">

@@ -1,7 +1,9 @@
 @extends('frontend.master')
 @section('content')
 <main>
-    <section class="country-specific servBk" style="background:url('img/upesi/services-bg.jpg');">
+    <section class="country-specific servBk" style="background: url(images/img/upesi/services-bg.jpg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;">
         <div class="wrapper">
             
                 
@@ -30,7 +32,7 @@
                                 <h2>Our Services</h2>
                                             
                         </div>
-
+                            
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="box_grid">

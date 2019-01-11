@@ -6,7 +6,7 @@
                 <h4 class="text-white text-center">Request Personal Assistance</h4>
                 
                 <div class="form-group">
-                    {!! Form::open(['action' => 'FormController@store', 'method' => 'POST']) !!}
+                    {!! Form::open(array('action' => 'ContactController@userforms', 'method' => 'POST')) !!}
                     {{ Form::hidden('identifier', 'assistance') }}
                     <div class="row">
                         <div class="col-sm">
@@ -54,9 +54,7 @@
                     {!! Form::close() !!}
                 </div><!-- End of Form Group -->
 
-            <div id="form-messages">Success</div>
-
-            </div>
+ 
         
 </section>
     <!-- End of Personal Assistance Form -->
@@ -112,13 +110,15 @@
         <div class="container">
                 <h4 class="text-white text-center">Send Money To</h4>
             <div class="row">
+            @foreach($all as $country)
                 <div class="col-sm col-6">
-                    <a href="{{url ('kenya')}}">
-                    <img src="{{ asset('images/img/upesi/kenya.png') }}" class="center-image">
-                    <p>Kenya</p>
+                    <a href="../countries/{{$country->name}}">
+                    <img src="{{asset('img/country-logo/').'/'.$country->logo}}" class="center-image">
+                    <p>{{$country->name}}</p>
                     </a>
                 </div>
-                <div class="col-sm col-6">
+            @endforeach
+                {{-- <div class="col-sm col-6">
                     <a href="{{url ('uganda')}}">
                     <img src="{{ asset('images/img/upesi/uganda.png') }}" class="center-image">
                     <p>Uganda</p>
@@ -167,11 +167,11 @@
                     </a>
                 </div>
                 <div class="col-sm col-6">
-                    <a href="{{url ('canada')}}">
+                    <a href="{{url ('/countries/canada')}}">
                     <img src="{{ asset('images/img/upesi/canada.png') }}" class="center-image">
                     <p class="text-center">Canada</p>
                     </a>
-                </div>
+                </div> --}}
                 <!--<div class="col-sm col-6">
                     <a href="single-country">
                     <img src="img/upesi/australia.png" class="center-image">

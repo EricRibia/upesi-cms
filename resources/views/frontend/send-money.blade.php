@@ -46,73 +46,73 @@
                     
                     <div class="row">
                 <div class="col-lg-3 col-6">
-                    <a href="kenya.php">
+                    <a href="{{url ('kenya')}}">
                     <img src="{{ asset('images/img/upesi/kenya.png') }}" class="center-image">
                     <p class="text-center">Kenya</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="uganda.php">
+                    <a href="{{url ('uganda')}}">
                     <img src="{{ asset('images/img/upesi/uganda.png') }}" class="center-image">
                     <p class="text-center">Uganda</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="tanzania.php">
+                    <a href="{{url ('tanzania')}}">
                     <img src="{{ asset('images/img/upesi/tanzania.png') }}" class="center-image">
                     <p class="text-center">Tanzania</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="rwanda.php">
+                    <a href="{{url ('rwanda')}}">
                     <img src="{{ asset('images/img/upesi/rwanda.png') }}" class="center-image">
                     <p class="text-center">Rwanda</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="ethiopia.php">
+                    <a href="ethiopia">
                     <img src="{{ asset('images/img/upesi/ethiopia.png') }}" class="center-image">
                     <p class="text-center">Ethiopia</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="ghana.php">
+                    <a href="{{url ('ghana')}}">
                     <img src="{{ asset('images/img/upesi/ghana.png') }}" class="center-image">
                     <p class="text-center">Ghana</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="nigeria.php">
+                    <a href="{{url ('nigeria')}}">
                     <img src="{{ asset('images/img/upesi/nigeria.png') }}" class="center-image">
                     <p class="text-center">Nigeria</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="india.php">
+                    <a href="{{url ('india')}}">
                     <img src="{{ asset('images/img/upesi/india.png') }}" class="center-image">
                     <p class="text-center">India</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="usa.php">
+                    <a href="{{url ('usa')}}">
                     <img src="{{ asset('images/img/upesi/usa.png') }}" class="center-image">
                     <p class="text-center">Usa</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="canada.php">
+                    <a href="{{url ('canada')}}">
                     <img src="{{ asset('images/img/upesi/canada.png') }}" class="center-image">
                     <p class="text-center">Canada</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="australia.php">
+                    <a href="{{url ('australia')}}">
                     <img src="{{ asset('images/img/upesi/australia.png') }}" class="center-image">
                     <p class="text-center">Australia</p>
                     </a>
                 </div>
                 <div class="col-lg-3 col-6">
-                    <a href="europe.php">
+                    <a href="{{url ('europe')}}">
                     <img src="{{ asset('images/img/upesi/european-union.png') }}" class="center-image">
                     <p class="text-center">Europe</p>
                     </a>

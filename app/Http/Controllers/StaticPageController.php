@@ -17,7 +17,9 @@ $res = json_decode($client->request('GET', 'company/upesi-money-transfer-limited
             "page-name" => "Careers page",
             "jobs" => $res
         ];
-        $response = $res->fuzu_api;
-        return view('frontend.career',compact('response'));
+        $info=[];
+        $info['page'] = 'Careers | Upesi money transfer';
+        $info['response'] = $res->fuzu_api;
+        return view('frontend.career',$info);
     }
 }

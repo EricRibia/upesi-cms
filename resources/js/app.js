@@ -42,6 +42,8 @@ const routes = [
     { path: '/edit-about', component:  require('./components/pages/About.vue') },
     { path: '/edit-services', component:  require('./components/pages/Services.vue') },
     { path: '/edit-policies', component:  require('./components/pages/Policies.vue') },
+    { path: '/edit-countries', component:  require('./components/pages/Countries.vue') },
+    { path: '/edit-payments', component:  require('./components/pages/Payments.vue') },
     { path: '/edit-team', component:  require('./components/pages/Team.vue') },
     { path: '/developer', component:  require('./components/Developer.vue') },
     { path: '/profile', component:  require('./components/Profile.vue') },

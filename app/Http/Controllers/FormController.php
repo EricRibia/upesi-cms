@@ -39,7 +39,7 @@ class FormController extends Controller
          $contact = new Contact;
         if($request->input('identifier') == 'contact'){
             $contact->type = 'contact';
-            $name = $request->input('fname') . ' ' . $request->input('lname');
+            $name = $request->input('name');
             $contact->name = $name;
             $contact->email = $request->input('email');
             $contact->phonenumber = $request->input('phone');

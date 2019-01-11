@@ -176,7 +176,7 @@ export default {
     },
     computed: {
     // a computed getter
-        vals: function () {
+        vals() {
             if(this.tasks){
             const newdata = this.tasks;
             return newdata.filter( (val) => { return val.type === 'value'; });

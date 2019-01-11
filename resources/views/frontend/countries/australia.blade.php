@@ -1,12 +1,12 @@
 @extends('frontend.master')
 @section('content')
 <main>
-    <section class="country-specific" style="background:url('images/img/upesi/australia.jpg');">
+    <section class="country-specific" style="background:url('../img/country-bk/{{$country->bimage}}');">
         <div class="wrapper">
             
                 <div class="country-heading">
                     <div class="container">
-                    <h2 class="fadeInUp text-white">Send Money to Australia</h2>
+                    <h2 class="fadeInUp text-white">Send Money to {{$country->name}}</h2>
                     </div>
                 </div>
         </div>
@@ -29,10 +29,8 @@
                 <div class="col-lg-12">
                     
                     <section id="description">
-                        <p>Australia is the sixth largest country in the world in terms of land mass. The entire country of Australia includes the Australian continent and numerous islands off the coast of the continent including Tasmania. The country is home to approximately 23 million people with 4.6 million of them living in the largest city of Sydney.  
-                        </p>
-                        <p>Send money from Australia to East Africa through our partners.
-                        </p>
+                        {{-- {{$country->intro}} --}}
+                        {!! nl2br(e($country->intro)) !!}
                                                 
                     
                 </div>

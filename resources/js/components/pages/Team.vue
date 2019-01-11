@@ -194,7 +194,7 @@ export default {
         },
      updateTeam(){
             this.$Progress.start();
-            this.form.put( 'api/pages/' + this.form.id)
+            this.form.put( 'api/team/' + this.form.id)
             .then( () => {
                 //success
                 $('#addNew').modal('hide');
@@ -207,7 +207,8 @@ export default {
                 Fire.$emit('createNew');
                 this.$Progress.finish();
             }).catch( () => {
-                //fail
+                $('#addNew').modal('hide');
+                $('#addNewTwo').modal('hide');
                 this.$Progress.fail();
             });
         },

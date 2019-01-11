@@ -31,8 +31,8 @@
                                 <h2>Privacy Policy</h2>
                                             
                         </div>
-                        
-                        <p>Our privacy policy explains how we treat your personal data and protect your privacy when you use our Services. By using our Services, you agree that Upesi can use such data in accordance with our privacy policies.
+                        {!! nl2br(e($privacy_policy[0])) !!}
+                        {{-- <p>Our privacy policy explains how we treat your personal data and protect your privacy when you use our Services. By using our Services, you agree that Upesi can use such data in accordance with our privacy policies.
                         </p>
                         <p>We respond to notices of alleged copyright infringement and terminate accounts of repeat violators of copyright infringement according to the process defined in the Kenya Data Protection Bill 2013
                             <h5>We collect information in two ways:</h5>
@@ -52,7 +52,7 @@
                         <p>These terms control the relationship between Upesi and you. They do not create any third party beneficiary rights.</p>
                         <p>If you do not comply with these terms, and we do not take action right away, this does not mean we are forfeiting any rights that we may have (such as taking action in the future).</p>
                         <p>If you have any questions or concerns about our Services or these Terms, you may contact us.</p>
-                        
+                         --}}
 
                         
                         

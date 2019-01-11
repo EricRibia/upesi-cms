@@ -9,17 +9,17 @@
 </div><!-- End Search Menu -->
 
 <!-- COMMON SCRIPTS -->
-<script type="text/javascript">
+  <script type="text/javascript">
 
-jQuery( document ).ready(function( $ ) {
-          
-          $('#world-map').JSMaps({
-            map: 'world'
-          });
+    $(function() {
 
-        });
-        
-</script>
+      $('#world-map').JSMaps({
+        map: 'world'
+      });
+
+    });
+    
+  </script>
  
 <script type="text/javascript" src="{{asset('js/frontend/common_scripts.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/frontend/main.js')}}"></script>
@@ -47,11 +47,12 @@ jQuery( document ).ready(function( $ ) {
         responsive: true,
         responsiveUnder: 1280,
         layersContainer: 1200,
-        skinsPath: 'layerslider/skins/'
+        skinsPath: 'css/layerslider/skins/'
             // Please make sure that you didn't forget to add a comma to the line endings
             // except the last line!
     });
 </script>
 
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="b4279ccf-0189-400a-8a79-2d611f5a6ed8";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
 

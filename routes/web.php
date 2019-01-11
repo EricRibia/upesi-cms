@@ -11,103 +11,104 @@
 |
 */
 // main routes
-Route::get('/', function () {
-    $page = 'Home | Upesi Money Transfer';
-    return view('frontend.main',compact('page'));
+Route::group(['middleware' => 'guest'], function(){
+    Route::get('/networks', function () {
+        $page = 'Our Networks | Upesi Money Transfer';
+        return view('frontend.network',compact('page'));
+    });
+    Route::get('/contact', function () {
+        $page = 'Contact Us | Upesi Money Transfer';
+        return view('frontend.contact',compact('page'));
+    });
+    Route::get('/how-it-works', function () {
+        $page = 'How it works | Upesi Money Transfer';
+        return view('frontend.howitworks',compact('page'));
+    });
+    Route::get('/bank-deposits', function () {
+        $page = 'Bank Deposits | Upesi Money Transfer';
+        return view('frontend.servic.bank-depo', compact('page'));
+    });
+    Route::get('/cash-pickups', function () {
+        $page = 'Cash pickups | Upesi Money Transfer';
+        return view('frontend.servic.cash-pic', compact('page'));
+    });
+    Route::get('/mobile-wallets', function () {
+        $page = 'Mobile Wallets | Upesi Money Transfer';
+        return view('frontend.servic.mobile-wal', compact('page'));
+    });
+    Route::get('/bill-payments', function () {
+        $page = 'Bill payments | Upesi Money Transfer';
+        return view('frontend.servic.dir-bil', compact('page'));
+    });
+
 });
 
-Route::get('/about-us', function () {
-    $page = 'About | Upesi Money Transfer';
-    return view('frontend.about',compact('page'));
-});
-Route::get('/services', function () {
-    $page = 'Services | Upesi Money Transfer';
-    return view('frontend.services',compact('page'));
-});
-Route::get('/networks', function () {
-    $page = 'Services | Upesi Money Transfer';
-    return view('frontend.network',compact('page'));
-});
-Route::get('/contact', function () {
-    $page = 'Contact Us | Upesi Money Transfer';
-    return view('frontend.contact',compact('page'));
-});
-Route::get('/send-money', function () {
-    $page = 'Send Money | Upesi Money Transfer';
-    return view('frontend.send-money',compact('page'));
-});
+Route::get('/', 'HomeController@home_page')->middleware('guest');
+Route::get('/about-us', 'HomeController@about_us');
+Route::get('/services', 'HomeController@services_page');
+
+
+
+
 //other routes
-Route::get('/team', function () {
-    $page = 'Team | Upesi Money Transfer';
-    return view('frontend.team',compact('page'));
-});
+Route::get('/team', 'HomeController@team_page');
 Route::get('/careers', 'StaticPageController@careers');
-Route::get('/how-it-works', function () {
-    $page = 'How it works | Upesi Money Transfer';
-    return view('frontend.howitworks',compact('page'));
-});
-Route::get('/faqs', function () {
-    $page = 'FAQs | Upesi Money Transfer';
-    return view('frontend.faqs',compact('page'));
-});
-Route::get('/privacy-policy', function () {
-    return view('frontend.privacy-policy');
-});
-Route::get('/terms-use', function () {
-    return view('frontend.terms-use');
-});
+
+Route::get('/faqs', 'HomeController@faqs_page');
+
+Route::get('/privacy-policy', 'HomeController@Privacy_page');
+Route::get('/terms-use', 'HomeController@terms_page');
 //services routes
-Route::get('/bank-deposits', function () {
-    return view('frontend.servic.bank-depo');
-});
-Route::get('/cash-pickups', function () {
-    return view('frontend.servic.cash-pic');
-});
-Route::get('/mobile-wallets', function () {
-    return view('frontend.servic.mobile-wal');
-});
-Route::get('/bill-payments', function () {
-    return view('frontend.servic.dir-bil');
-});
+
+
 //countries routes
-Route::get('/australia', function () {
-    return view('frontend.countries.australia');
-});
+Route::get('/countries/{slug}', 'HomeController@country_pages');
+
 Route::get('/canada', function () {
-    return view('frontend.countries.canada');
+    $page = 'Canada | Upesi Money Transfer';
+    return view('frontend.countries.canada', compact('page'));
 });
 Route::get('/ethiopia', function () {
-    return view('frontend.countries.ethiopia');
+    $page = 'Ethiopia | Upesi Money Transfer';
+    return view('frontend.countries.ethiopia', compact('page'));
 });
 Route::get('/europe', function () {
-    return view('frontend.countries.europe');
+    $page = 'Europe | Upesi Money Transfer';
+    return view('frontend.countries.europe', compact('page'));
 });
 Route::get('/ghana', function () {
-    return view('frontend.countries.ghana');
+    $page = 'Ghana | Upesi Money Transfer';
+    return view('frontend.countries.ghana', compact('page'));
 });
 Route::get('/india', function () {
-    return view('frontend.countries.india');
+    $page = 'India | Upesi Money Transfer';
+    return view('frontend.countries.india', compact('page'));
 });
 Route::get('/kenya', function () {
-    return view('frontend.countries.kenya');
+    $page = 'Kenya | Upesi Money Transfer';
+    return view('frontend.countries.kenya',compact('page'));
 });
 Route::get('/nigeria', function () {
-    return view('frontend.countries.nigeria');
+    $page = 'Nigeria | Upesi Money Transfer';
+    return view('frontend.countries.nigeria', compact('page'));
 });
 Route::get('/rwanda', function () {
-    return view('frontend.countries.rwanda');
+    $page = 'Rwanda | Upesi Money Transfer';
+    return view('frontend.countries.rwanda', compact('page'));
 });
 Route::get('/tanzania', function () {
-    return view('frontend.countries.tanzania');
+    $page = 'Tanzania | Upesi Money Transfer';
+    return view('frontend.countries.tanzania', compact('page'));
 });
 Route::get('/uganda', function () {
-    return view('frontend.countries.uganda');
+    $page = 'Uganda | Upesi Money Transfer';
+    return view('frontend.countries.uganda', compact('page'));
 });
 Route::get('/usa', function () {
-    return view('frontend.countries.usa');
+    $page = 'USA | Upesi Money Transfer';
+    return view('frontend.countries.usa', compact('page'));
 });
 Auth::routes();
-Route::post('contact', 'ContactController@userforms');
-Route::resource('main', 'FormController');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('{path}', 'HomeController@main')->where('path', '([A-z\d-\/_.]+)?' );
+Route::post('userforms','ContactController@userforms')->name('contacts.userforms');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard')->middleware('auth');;
+Route::get('{path}', 'HomeController@index')->where('path', '([A-z\d-\/_.]+)?' )->middleware('auth');;

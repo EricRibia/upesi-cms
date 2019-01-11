@@ -25,7 +25,7 @@
 						<h4 class="ls-l slide_typo" style="top: 75%;left:50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;">
 							Send Cash Fast</h4>
 						<p class="ls-l slide_typo" style="top:85%;left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;">
-							It's now easy to send money to other countries around the world
+							Its now easy to send money to other countries around the world
 						</p>
 					
 					<!--<a class="ls-l btn_1 rounded" style="top:80%; left:50%;white-space: nowrap;" data-ls="durationin:2000;delayin:1400;easingin:easeOutElastic;" href='courses-grid.html'>Read more</a>-->
@@ -67,61 +67,6 @@
 			</div>
 		</div>
 		<!-- End layerslider -->
-
-	<!-- Start of Send Money Form -->
-<section class="form-section">
-			
-				<div class="container">
-					<div class="form-group">
-					<form name="" action="" method="post">
-						<div class="row">
-							<div class="col-sm">
-								<span class="input">
-								<input class="input_field white_field" type="text" autocomplete="off" name="email">
-									<label class="input_label_white input_label">
-									<span class="input__label-content">Send Amount</span>
-								</label>
-								</span>
-							</div>
-
-							<div class="col-sm">
-								<span class="input">
-								<input class="input_field white_field" type="text" autocomplete="off" name="email">
-									<label class="input_label_white input_label">
-									<span class="input__label-content">To Tanzania</span>
-								</label>
-								</span>
-							</div>
-
-							<div class="col-sm">
-								<span class="input">
-								<input class="input_field white_field" type="text" autocomplete="off" name="email">
-									<label class="input_label_white input_label">
-									<span class="input__label-content">From Kenya</span>
-								</label>
-								</span>
-							</div>
-
-							<div class="col-sm">
-								<span class="input">
-								<input class="input_field white_field" type="text" autocomplete="new-password" name="password">
-									<label class="input_label_white input_label">
-									<span class="input__label-content">Receiving Amount</span>
-								</label>
-								</span>
-							</div>
-
-							<div class="col-sm">
-								<button type="submit" class="btn_1 rounded full-width add_top_30" value="Send Money">Send Money</button>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			
-	</section>
-
-		<!-- End of Send Money Form -->
 
 	<!-- Start Of Services Section -->
 	<section class="section-content">
@@ -339,9 +284,7 @@
 
 
 	<!-- Start Of Download App Section -->
-		<?php
-		//include('inc/download-app.php');
-		?>
+
 	<!-- Start Of End App Section -->
 
 

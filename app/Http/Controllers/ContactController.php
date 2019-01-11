@@ -10,13 +10,13 @@ class ContactController extends Controller
         $contact = new Contact;
         if($request->input('identifier') == 'contact'){
             $contact->type = 'contact';
-            $name = $request->input('name') . ' ' . $request->input('name');
+            $name = $request->input('fname').' '.$request->input('lname');
             $contact->name = $name;
             $contact->email = $request->input('email');
             $contact->phonenumber = $request->input('phone');
             $contact->orgnmessage =$request->input('message');
             $contact->save();
-            return  redirect()->back()->with('msg','message');
+            return  redirect()->back()->with('success','message sent successfully');
         }
         if($request->input('identifier') == 'assistance'){
             $contact->type = 'assistance';
@@ -25,7 +25,7 @@ class ContactController extends Controller
             $contact->phonenumber = $request->input('phone');
             $contact->orgnmessage =$request->input('message');
             $contact->save();
-            return  redirect()->back()->with('msg','message');  
+            return  redirect()->back()->with('success','message sent successfully');
         }
     
     }

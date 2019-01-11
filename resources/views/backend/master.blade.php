@@ -83,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </router-link>
               </li>
               <li>
-              <a href="{{url ('/')}}" class="nav-link">
+              <a href="{{url ('/')}}" target="_blank" class="nav-link">
                 <i class="fa fa-external-link"></i>
                 <p>
                   View Frontend
@@ -119,7 +119,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/edit-globe" class="nav-link">
+                <router-link to="/edit-team" class="nav-link">
                   <i class="fas fa-circle"></i>
                   <p>Team</p>
                 </router-link>
@@ -127,8 +127,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
               
             </ul>
           </li>
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="fas fa-cogs"></i>
+              <p>
+                Countries
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/edit-countries" class="nav-link">
+                    <i class="fas fa-globe"></i>
+                  <p>Create page</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/edit-payments" class="nav-link">
+                    <i class="fas fa-globe"></i>
+                  <p>Add payments</p>
+                </router-link>
+              </li>
+              
+            </ul>
+          </li>
           {{-- @endcanany --}}
-          <li class="nav-item has-treeview">
+          {{-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="fas fa-cogs"></i>
               <p>
@@ -164,7 +188,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
               
             </ul>
-          </li>
+          </li> --}}
           <li class="nav-item">
               <router-link to="/users" class="nav-link">
                 <i class="fa fa-shield"></i>

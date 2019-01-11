@@ -7,7 +7,9 @@
         <li><a href="{{url('services')}}" class="login">Our Services</a></li>
         <li><a href="{{url('networks')}}" class="login">Our Networks</a></li>
         <li><a href="{{url('contact')}}" class="login">Contact Us</a></li>
-        <li class="hidden_tablet"><a href="{{url('send-money')}}"  class="btn_1 rounded">Send Money</a></li>
+        @if (Auth::check())      
+        <li class="hidden_tablet"><a href="{{url('/dashboard')}}"  class="btn_1 rounded">Dashboard</a></li>
+        @endif
         <li>
             <div class="hamburger hamburger--spin">
                 <div class="hamburger-box">
@@ -37,6 +39,7 @@
                         <li><a href="{{url ('networks')}}">Our Networks</a></li>
                         <li><a href="{{url ('how-it-works')}}">How It Works</a></li>
                         <li><a href="{{url ('contact')}}">Contact Us</a></li>
+                        <li><a href="{{url ('dashboard')}}">Dashboard</a></li>
                         
                     </ul>
                 </div>
