@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Start of Preloader -->
-    {{-- @include('frontend.inc.preloader') --}}
+    @include('frontend.inc.preloader')
     <!-- End Preload -->
 
     {{-- navigation header --}}
