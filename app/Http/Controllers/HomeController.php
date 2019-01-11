@@ -30,6 +30,34 @@ class HomeController extends Controller
         $data['page'] = 'Home | Upesi Money Transfer';
         return view('frontend.main',$data);
     }
+    public function networks_page(){
+        $page = 'Our Networks | Upesi Money Transfer';
+        return view('frontend.network',compact('page'));
+    }
+    public function contact_page(){
+        $page = 'Contact Us | Upesi Money Transfer';
+        return view('frontend.contact',compact('page'));
+    }
+    public function how_it_works_page(){
+        $page = 'How it works | Upesi Money Transfer';
+        return view('frontend.howitworks',compact('page'));
+    }
+    public function bank_deposits(){
+        $page = 'Bank Deposits | Upesi Money Transfer';
+        return view('frontend.servic.bank-depo', compact('page'));
+    }
+    public function cash_pickups(){
+        $page = 'Cash pickups | Upesi Money Transfer';
+        return view('frontend.servic.cash-pic', compact('page'));
+    }
+    public function mobile_wallets(){
+        $page = 'Mobile Wallebill_paymentsts | Upesi Money Transfer';
+        return view('frontend.servic.mobile-wal', compact('page'));
+    }
+    public function bill_payments(){
+        $page = 'Bill payments | Upesi Money Transfer';
+        return view('frontend.servic.dir-bil', compact('page'));
+    }
     public function about_us()
     { 
         $data=[];

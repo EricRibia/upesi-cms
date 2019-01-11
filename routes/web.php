@@ -11,37 +11,13 @@
 |
 */
 // main routes
-Route::group(['middleware' => 'guest'], function(){
-    Route::get('/networks', function () {
-        $page = 'Our Networks | Upesi Money Transfer';
-        return view('frontend.network',compact('page'));
-    });
-    Route::get('/contact', function () {
-        $page = 'Contact Us | Upesi Money Transfer';
-        return view('frontend.contact',compact('page'));
-    });
-    Route::get('/how-it-works', function () {
-        $page = 'How it works | Upesi Money Transfer';
-        return view('frontend.howitworks',compact('page'));
-    });
-    Route::get('/bank-deposits', function () {
-        $page = 'Bank Deposits | Upesi Money Transfer';
-        return view('frontend.servic.bank-depo', compact('page'));
-    });
-    Route::get('/cash-pickups', function () {
-        $page = 'Cash pickups | Upesi Money Transfer';
-        return view('frontend.servic.cash-pic', compact('page'));
-    });
-    Route::get('/mobile-wallets', function () {
-        $page = 'Mobile Wallets | Upesi Money Transfer';
-        return view('frontend.servic.mobile-wal', compact('page'));
-    });
-    Route::get('/bill-payments', function () {
-        $page = 'Bill payments | Upesi Money Transfer';
-        return view('frontend.servic.dir-bil', compact('page'));
-    });
-
-});
+    Route::get('/networks', 'HomeController@networks_page');
+    Route::get('/contact', 'HomeController@contact_page');
+    Route::get('/how-it-works', 'HomeController@how_it_works_page');
+    Route::get('/bank-deposits','HomeController@bank_deposits');
+    Route::get('/cash-pickups','HomeController@cash_pickups');
+    Route::get('/mobile-wallets','HomeController@mobile_wallets' );
+    Route::get('/bill-payments','HomeController@bill_payments');
 
 Route::get('/', 'HomeController@home_page');
 Route::get('/about-us', 'HomeController@about_us');
